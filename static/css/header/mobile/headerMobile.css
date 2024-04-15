@@ -1,0 +1,6 @@
+#left{
+    display: none;
+}
+#search, #right {
+    width: 100%;
+}
