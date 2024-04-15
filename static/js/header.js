@@ -29,26 +29,31 @@ document.querySelector("#changeProfile").addEventListener("click", function () {
 document.querySelector("#filtro").addEventListener("click", function () {
     var navbar = document.querySelector(".navbar");
     var arrow = document.querySelector("#arrow");
-    
-    if (navbar.style.display === "none") {
+
+    var computedStyle = window.getComputedStyle(navbar);
+    var display = computedStyle.getPropertyValue("display");
+
+    if (display === "none") {
         navbar.style.display = "block";
         arrow.innerHTML = "&#x25B4;";
-    } else {
+    } else if (display === "block") {
         navbar.style.display = "none";
         arrow.innerHTML = "&#x25BE;";
     }
 });
 
 document.querySelector("#filtroM").addEventListener("click", function () {
-    var navbar = document.querySelector(".navbar");
-    var arrow = document.querySelector("#arrow");
-    
-    if (navbar.style.display === "none") {
-        navbar.style.display = "block";
-        arrow.innerHTML = "&#x25B4;";
+    var navbarm = document.querySelector(".navbar");
+    var arrowm = document.querySelector("#arrow");
+
+    var computedStyle = window.getComputedStyle(navbarm);
+    var display = computedStyle.getPropertyValue("display");
+
+    if (display === "none") {
+        navbarm.style.display = "block";
+        arrowm.innerHTML = "&#x25B4;";
     } else {
-        navbar.style.display = "none";
-        arrow.innerHTML = "&#x25BE;";
+        navbarm.style.display = "none";
+        arrowm.innerHTML = "&#x25BE;";
     }
 });
-
