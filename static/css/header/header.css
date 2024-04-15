@@ -69,11 +69,13 @@ header{
     width: 100%;
     text-align: left;
     margin-top: -2px;
+    margin-bottom: 0;
 }
 #userNav{
-    top: 4.2rem;
+    top: 4.3rem;
+    right: 0;
     display: flex;
-    position: fixed;
+    position: absolute;
     flex-direction: column;
     align-self: flex-end;
     background-color: #fff;
