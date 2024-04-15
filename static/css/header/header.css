@@ -71,6 +71,7 @@ header{
     margin-top: -2px;
 }
 #userNav{
+    top: 4.2rem;
     display: flex;
     position: fixed;
     flex-direction: column;
