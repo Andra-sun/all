@@ -39,3 +39,16 @@ document.querySelector("#filtro").addEventListener("click", function () {
     }
 });
 
+document.querySelector("#filtroM").addEventListener("click", function () {
+    var navbar = document.querySelector(".navbar");
+    var arrow = document.querySelector("#arrow");
+    
+    if (navbar.style.display === "none") {
+        navbar.style.display = "block";
+        arrow.innerHTML = "&#x25B4;";
+    } else {
+        navbar.style.display = "none";
+        arrow.innerHTML = "&#x25BE;";
+    }
+});
+
