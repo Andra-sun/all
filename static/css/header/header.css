@@ -142,3 +142,6 @@ header{
     font-weight: 900;
     margin-right: 30px;
 }
+#moreItens{
+    display: none;
+}
