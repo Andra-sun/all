@@ -5,7 +5,7 @@
     width: auto;
     height: auto;
     padding-bottom: 15px;
-    display: block;
+    display: none;
     background-color: var(--color-card);
     /* border-top-right-radius: 30px; */
 }
