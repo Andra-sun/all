@@ -57,3 +57,14 @@ document.querySelector("#filtroM").addEventListener("click", function () {
         arrowm.innerHTML = "&#x25BE;";
     }
 });
+
+
+
+document.getElementById("menuIconMobile").addEventListener("click", function(){
+    const moreItens = document.getElementById("moreItens");
+    if(moreItens.style.display == "none"){
+        moreItens.style.display ="flex";
+    }else{
+        moreItens.style.display = "none";
+    }
+});

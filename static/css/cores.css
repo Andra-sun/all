@@ -6,7 +6,8 @@
     --color-detail: #87CEEB;
     --color-detail-hover: #6CADC8;
     --color-card: #fff;
-    --color-fg-hover: #dadada49;
+    --color-fg-hover: #dadada;
+    --color-border: rgb(179, 179, 179);
 }
 [data-theme="moderador"] {
     --color-bg: #F6F6F6;
@@ -17,6 +18,7 @@
     --color-detail-hover: #E3CD56;
     --color-card: #fff;
     --color-fg-hover: #dadada49;
+    --color-border: rgb(179, 179, 179);
 }
 [data-theme="admin"] {
     --color-bg: #222222;
@@ -27,4 +29,5 @@
     --color-detail-hover: #6B8E23;
     --color-card: #333333;
     --color-fg-hover: #fcfcfc49;
+    --color-border: #fcfcfc49;
 }
