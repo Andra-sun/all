@@ -44,7 +44,7 @@ header{
     align-items: center;
 }
 #search input{
-    background-color: #fff;
+    background-color: var(--color-card);
     height: 100%;
     width: 85%;
     border: none;
