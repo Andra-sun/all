@@ -1,5 +1,8 @@
 header{
-    position: sticky;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
     background-color: var(--color-card);
     color: var(--color-fg);
     padding: 0 20px 0 20px;
@@ -19,9 +22,13 @@ header{
 #left p{
     margin-right: 20px;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
 }
 #left p:hover{
-    color: #333;
+    background-color: var(--color-fg-hover);
 }
 #right, #search{
     display: flex;
@@ -30,7 +37,8 @@ header{
 }
 #search{
     background-color: var(--color-card);
-    border: 2px solid #3333;
+    color: var(--color-fg);
+    border: 2px solid var(--color-fg-hover);
     height: 2rem;
     padding: 2px;
     border-radius: 10px;
@@ -39,7 +47,6 @@ header{
     justify-content: space-evenly;
 }
 #search i{
-    color: var(--color-fg);
     display: flex;
     align-items: center;
 }
@@ -74,15 +81,15 @@ header{
     margin-bottom: 0;
 }
 #userNav{
-    top: 4.3rem;
+    top: 4.2rem;
     right: 0;
     display: flex;
     position: absolute;
     flex-direction: column;
     align-self: flex-end;
     background-color: var(--color-card);
-    border-left: 2px solid #3333;
     color: var(--color-fg);
+    border-left: 2px solid #3333;
     border-bottom: 2px solid #3333;
     padding: 20px;
     justify-content: space-evenly;
@@ -104,7 +111,7 @@ header{
     text-align: center;
 }
 .menu-item:hover{
-    background-color: #dadada49;
+    background-color: var(--color-fg-hover);
     border-radius: 5px;
 }
 

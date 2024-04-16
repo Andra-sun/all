@@ -35,16 +35,19 @@
         <!-- navBar css -->
         <link rel="stylesheet" href="static/css/navBar/navbar.css" />
         <link
-        rel="stylesheet"
-        href="static/css/navBar/mobile/navBarMobile.css"
-        media="screen and
+            rel="stylesheet"
+            href="static/css/navBar/mobile/navBarMobile.css"
+            media="screen and
 (max-width: 840px)"
-    />
+        />
+
+        <!-- banner -->
+        <link rel="stylesheet" href="static/css/banner/banner.css" />
 
         <!-- card css -->
         <link rel="stylesheet" href="static/css/card/card.css" />
     </head>
-    <body data-theme="padrao">
+    <body data-theme="admin">
         <header>
             <div id="left">
                 <h1 id="logoText">Adote um pet</h1>
@@ -68,9 +71,12 @@
             </div>
             <div id="userNav" style="display: none">
                 <h3 id="usuario">
-                    ola <span id="usuarioName" style="color: var(--color-main)">aa</span>!
+                    ola
+                    <span id="usuarioName" style="color: var(--color-main)"
+                        >aa</span
+                    >!
                 </h3>
-            
+
                 <ul>
                     <li class="menu-item">
                         <span>Animais salvos</span>
@@ -97,77 +103,64 @@
             <p>Duvidas frequentes</p>
             <p id="filtro">Filtros <span id="arrow">&#x25BE;</span></p>
         </div>
+        <div id="bannerArea">
+            <div id="sliders">
+                <div class="slide">
+                    <img src="static/img/slider1.png" alt="banner1" />
+                </div>
+                <div class="slide">
+                    <img src="static/img/slider1.png" alt="banner2" />
+                </div>
+                <div class="slide">
+                    <img src="static/img/slider1.png" alt="banner3" />
+                </div>
+            </div>
+            <div id="sliderStatus"></div>
+        </div>
+
         <main>
             <nav class="navbar">
                 <div class="filter-section">
-                    <h3>Espécie</h3>
-                    <ul>
+                    <h3 id="speciesTitle" class="filter-title">
+                        Espécie <span id="speciesTitleArrow" class="arrow">&#x25BE;</span>
+                    </h3>
+                    <ul id="speciesList" class="hidden">
                         <li>
-                            <input
-                                type="checkbox"
-                                id="dog"
-                                onchange="showBreeds('dog')"
-                            /><label for="dog">Cachorro</label>
+                            <input type="checkbox" id="dog" onchange="showBreeds('dog')"/>
+                            <label for="dog">Cachorro</label>
                         </li>
                         <div class="filter-section breed-list" id="breedListDog">
                             <ul>
                                 <li>
-                                    <input
-                                        type="checkbox"
-                                        class="breed"
-                                        value="Golden Retriever"
-                                    />
+                                    <input type="checkbox" class="breed" value="Golden Retriever"/>
                                     <label>Golden Retriever</label>
                                 </li>
                                 <li>
-                                    <input
-                                        type="checkbox"
-                                        class="breed"
-                                        value="Labrador Retriever"
-                                    />
+                                    <input type="checkbox" class="breed" value="Labrador Retriever"/>
                                     <label>Labrador Retriever</label>
                                 </li>
                                 <li>
-                                    <input
-                                        type="checkbox"
-                                        class="breed"
-                                        value="Bulldog"
-                                    />
+                                    <input type="checkbox" class="breed" value="Bulldog"/>
                                     <label>Bulldog</label>
                                 </li>
                             </ul>
                         </div>
                         <li>
-                            <input
-                                type="checkbox"
-                                id="cat"
-                                onchange="showBreeds('cat')"
-                            /><label for="cat">Gato</label>
+                            <input type="checkbox" id="cat" onchange="showBreeds('cat')"/>
+                            <label for="cat">Gato</label>
                         </li>
                         <div class="filter-section breed-list" id="breedListCat">
                             <ul>
                                 <li>
-                                    <input
-                                        type="checkbox"
-                                        class="breed"
-                                        value="Siamês"
-                                    />
+                                    <input type="checkbox" class="breed" value="Siamês"/>
                                     <label>Siamês</label>
                                 </li>
                                 <li>
-                                    <input
-                                        type="checkbox"
-                                        class="breed"
-                                        value="Maine Coon"
-                                    />
+                                    <input type="checkbox" class="breed" value="Maine Coon"/>
                                     <label>Maine Coon</label>
                                 </li>
                                 <li>
-                                    <input
-                                        type="checkbox"
-                                        class="breed"
-                                        value="Persa"
-                                    />
+                                    <input type="checkbox" class="breed" value="Persa"/>
                                     <label>Persa</label>
                                 </li>
                             </ul>
@@ -175,89 +168,105 @@
                     </ul>
                 </div>
                 <div class="filter-section">
-                    <h3>Tamanho</h3>
-                    <ul>
+                    <h3 id="sizeTitle" class="filter-title">
+                        Tamanho <span id="sizeTitleArrow" class="arrow">&#x25BE;</span>
+                    </h3>
+                    <ul id="sizeList" class="hidden">
                         <li>
-                            <input type="checkbox" id="size1" /><label for="size1"
-                                >Pequeno</label
-                            >
+                            <input type="checkbox" id="size1" />
+                            <label for="size1">Pequeno</label>
                         </li>
                         <li>
-                            <input type="checkbox" id="size2" /><label for="size2"
-                                >Médio</label
-                            >
+                            <input type="checkbox" id="size2" />
+                            <label for="size2">Médio</label>
                         </li>
                         <li>
-                            <input type="checkbox" id="size3" /><label for="size3"
-                                >Grande</label
-                            >
-                        </li>
-                    </ul>
-                </div>
-                <div class="filter-section">
-                    <h3>Idade</h3>
-                    <ul>
-                        <li>
-                            <input type="checkbox" id="age1" /><label for="age1"
-                                >0-1 ano</label
-                            >
-                        </li>
-                        <li>
-                            <input type="checkbox" id="age2" /><label for="age2"
-                                >1-3 anos</label
-                            >
-                        </li>
-                        <li>
-                            <input type="checkbox" id="age3" /><label for="age3"
-                                >3-5 anos</label
-                            >
-                        </li>
-                        <li>
-                            <input type="checkbox" id="age3" /><label for="age3"
-                                >5+</label
-                            >
-                        </li>
-                        <li>
-                            <input type="checkbox" id="age3" /><label for="age3"
-                                >Desconhecida</label
-                            >
+                            <input type="checkbox" id="size3" />
+                            <label for="size3">Grande</label>
                         </li>
                     </ul>
                 </div>
                 <div class="filter-section">
-                    <h3>Deficiência</h3>
-                    <ul>
+                    <h3 id="ageTitle" class="filter-title">
+                        Idade <span id="ageTitleArrow" class="arrow">&#x25BE;</span>
+                    </h3>
+                    <ul id="ageList" class="hidden">
                         <li>
-                            <input type="radio" id="yes" name="deficiency" /><label
-                                for="yes"
-                                >Sim</label
-                            >
+                            <input type="checkbox" id="age1" />
+                            <label for="age1">0-1 ano</label>
                         </li>
                         <li>
-                            <input type="radio" id="no" name="deficiency" /><label
-                                for="no"
-                                >Não</label
-                            >
+                            <input type="checkbox" id="age2" />
+                            <label for="age2">1-3 anos</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="age3" />
+                            <label for="age3">3-5 anos</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="age4" />
+                            <label for="age4">5+</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="ageUnknown" />
+                            <label for="ageUnknown">Desconhecida</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-section">
+                    <h3 id="deficiencyTitle" class="filter-title">
+                        Deficiência <span id="deficiencyTitleArrow" class="arrow">&#x25BE;</span>
+                    </h3>
+                    <ul id="deficiencyList" class="hidden">
+                        <li>
+                            <input type="checkbox" id="yes" name="deficiency" />
+                            <label for="yes">Sim</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="no" name="deficiency" />
+                            <label for="no">Não</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-section">
+                    <h3 id="genderTitle" class="filter-title">
+                        Sexo <span id="genderTitleArrow" class="arrow">&#x25BE;</span>
+                    </h3>
+                    <ul id="genderList" class="hidden">
+                        <li>
+                            <input type="checkbox" name="macho" id="macho">
+                            <label for="macho">Macho</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="femea" id="femea">
+                            <label for="femea">Femea</label>
                         </li>
                     </ul>
                 </div>
                 <button id="filterBtn">Filtrar</button>
             </nav>
+            
             <section id="cards">
                 <div class="card">
-                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS" alt="Imagem do Animal">
+                    <img
+                        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"
+                        alt="Imagem do Animal"
+                    />
                     <div class="info">
                         <h2>Pedrin</h2>
-                        <p>Idade:  5 meses</p>
+                        <p>Idade: 5 meses</p>
                         <p>Espécie: Cachorro</p>
                         <p>Raça: S.R.C</p>
                         <p>Tamanho: Micro</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6-yM6aQWIo5xxdoDjGcTIq7ZN9RbrNF-3mAZDQvtABQ&s" alt="Imagem do Animal">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6-yM6aQWIo5xxdoDjGcTIq7ZN9RbrNF-3mAZDQvtABQ&s"
+                        alt="Imagem do Animal"
+                    />
                     <div class="info">
-                        <h2>Pedrinho</h2>
+                        <h2>Juan</h2>
                         <p>Idade: 2 anos</p>
                         <p>Espécie: Gato</p>
                         <p>Raça: Siamês</p>
@@ -265,7 +274,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFJ2o1m5ZRT9zL17KfLtUpz2p5MNefpRrkOQb9Tv7-yw&s" alt="Imagem do Animal">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFJ2o1m5ZRT9zL17KfLtUpz2p5MNefpRrkOQb9Tv7-yw&s"
+                        alt="Imagem do Animal"
+                    />
                     <div class="info">
                         <h2>Rex</h2>
                         <p>Idade: 3 anos</p>
@@ -275,7 +287,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://saude.abril.com.br/wp-content/uploads/2016/09/cachorro-vira-lata-91081.jpg?quality=85&strip=info&w=720&h=440&crop=1" alt="Imagem do Animal">
+                    <img
+                        src="https://saude.abril.com.br/wp-content/uploads/2016/09/cachorro-vira-lata-91081.jpg?quality=85&strip=info&w=720&h=440&crop=1"
+                        alt="Imagem do Animal"
+                    />
                     <div class="info">
                         <h2>Tobby</h2>
                         <p>Idade: 2 anos</p>
@@ -285,7 +300,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV3RtuwkMYTdGSdjV1GkwtqPlxT2m25OpTZ7CRIcpVCA&s" alt="Imagem do Animal">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV3RtuwkMYTdGSdjV1GkwtqPlxT2m25OpTZ7CRIcpVCA&s"
+                        alt="Imagem do Animal"
+                    />
                     <div class="info">
                         <h2>Mimi</h2>
                         <p>Idade: 1 ano e meio</p>
@@ -295,7 +313,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwD4Crezkb4D7yDCExwx7J7JnvS5uzCvt1OwDshi19Mg&s" alt="Imagem do Animal">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwD4Crezkb4D7yDCExwx7J7JnvS5uzCvt1OwDshi19Mg&s"
+                        alt="Imagem do Animal"
+                    />
                     <div class="info">
                         <h2>Luna</h2>
                         <p>Idade: 4 anos</p>
@@ -307,8 +328,8 @@
             </section>
         </main>
 
-
         <script src="static/js/header.js"></script>
         <script src="static/js/navBar.js"></script>
+        <script src="static/js/banner.js"></script>
     </body>
 </html>
