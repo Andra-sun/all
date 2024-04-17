@@ -155,6 +155,7 @@ header{
 #logoText{
     font-weight: 900;
     margin-right: 30px;
+    color: var(--color-main);
 }
 #moreItens{
     display: none;
